@@ -1,0 +1,72 @@
+git: faz versionamento de código, ou seja, possibilita salvar mais de uma edição do código e recuperar versões antigas.
+
+commits: alterações no projeto
+
+git status - mostra a situação do arquivo
+git add . - adiciona arquivo no stage
+git commit - alteração no arquivo abrindo o nano
+git commit -m "escreva a alteração" -  altera direto no arquivo
+git commit -am "escreve a alteração" - altera direto no arquivo e adiciona no stage
+
+git config --global user.name "thayana"
+git config --global user.email "thayana@teste.com"
+git config --global core.editor "nano"
+
+nomemclaturas para mensagens em commits
+
+> chore - pequena tarefa
+	git commit -m "chore: removendo arquivo.txt"
+	
+> fix - correções
+	git commit -m "fix: correção no cálculo de médias"
+	
+> feat - inclusão de funcionalidade
+	git commit -m "feat: inclusão de função para calcular média"
+	
+> docs - atualização de documentação
+	git commit -m "docs: atualizando o changelog.md"
+	
+	
+git log - lista todas os commits feitos no de
+git log -n 2 - lista os dois ultimos commists
+git log --oneline - lista os commits resumidamente
+git log --star lista totalmente detalhado
+git log -n 3 --oneline - une as funções
+
+git checkout - desfaz um alterações que não commitadas ou adicionadas ao stage
+git checkout iddoarquivo - navega entre os commits
+git revert HEAD COMMIT_ID - desfaz a alterção
+
+git branch - lista todas as branchs (ramificações)
+git branch nomedabranch - cria uma nova branch
+git checkout nomedabranch - navega entre as branchs
+git checkout -b nomedabranchnova - cria uma nova branch e se movimenta para dentro dela
+git branch nomedabranchnova nomedabranchreferencia - cria uma nova branch referenciada em uma já existente
+git branch -D nomedabranch - remove a branch 
+
+nomenclatura de branchs
+> hotflix/nomedabranch
+	usado para correções rápidas
+	
+> bugfix/nomedabranch
+	correção de um bug que não é impeditivo para o usuário, ou seja, não compromete o fluxo do site
+	
+> feature/nomedabranch
+	adição de uma funcionalidade será contida nessa nova branch até ser validada
+	
+git remote -v - verificar url de area remota
+git remote remove origin - remote area remota cadastrada
+git remote add origin url_do_repositorio - conecta com a area remota
+git branch -M main
+git push -u origin main
+git push - sobe arquivos novos para o git
+git pull - baixa as modificações criadas na area remota
+git clone _url_do_repositorio -l - baixa repositorio feito no github
+ 
+git config --global core.autocrlf true - Esse comando ajusta o Git para converter automaticamente 
+LF para CRLF ao fazer check-out em sistemas Windows e CRLF para LF ao fazer commit.
+
+alguns comandos:
+
+pwd - Apresenta no terminal o caminho do sistema onde estamos localizados nesse momento.
+cd - -Ao usar esse comando, iremos retornar ao diretório anterior ao que estávamos ao usar o comando cd. 
